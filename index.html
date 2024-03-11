@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<style type="text/css">
+		.bg {
+			background-color: black;
+		}
+		.defeat{
+			position: absolute;
+			top: 105px;
+			left: 310px;
+			display: none;
+			background: url(defeat.jpg);
+			background-size:100% 100% ;
+			height: 700px;
+			width: 850px;
+			
+		}
+		.win{
+			position: absolute;
+			top: 105px;
+			left: 310px;
+			display: none;
+			background: url(win.avif);
+			background-size:100% 100% ;
+			height: 700px;
+			width: 850px;
+		}
+		.fon{
+			background: url(fon.webp);
+			background-size: 100% 100%;
+
+		}
+		.text{
+			color: white;
+		}
+	</style>
+</head>
+<body class="fon">
+	<!-- это div-родитель -->
+	<div class="col-7  mx-auto">
+		<div>
+			<h1 class="task text">Найди спрятанные минералы. Попробуй собрать 6 баллов</h1>
+			<h1 class="text">Score: <span class="score text">0</span></h1>
+			<h1 class="text">hp: <span class="hp text">3</span></h1>
+		</div>
+		<!-- Дивы с нумерацией 1, 2, 3 и т.д. -->
+		<div class="row">
+			<div class="col-1 px-5 py-3  bg-warning text-center border">
+
+			</div>
+			<div class="col-1 px-5 py-3  bg-warning text-center border">
+				<h4>1</h4>
+			</div>
+			<div class="col-1 px-5 py-3  bg-warning text-center border">
+				<h4>2</h4>
+			</div>
+			<div class="col-1 px-5 py-3  bg-warning text-center border">
+				<h4>3</h4>
+			</div>
+			<div class="col-1 px-5 py-3  bg-warning text-center border">
+				<h4>4</h4>
+			</div>
+			<div class="col-1 px-5  py-3 bg-warning text-center border">
+				<h4>5</h4>
+			</div>
+			<div class="col-1 px-5 py-3  bg-warning text-center border">
+				<h4>6</h4>
+			</div>
+		</div>
+		<!--Линия А-->
+		<div class="row">
+			<div class="col-1 px-5 py-4 bg-warning text-center border">
+				<h4>A</h4>
+			</div>
+			<div class="col-1  px-5 py-4 bg border bang">
+				
+			</div>
+			<div class="col-1  px-5 py-4 bg border coin">
+				
+			</div>
+			<div class="col-1  px-5 py-4 bg border meme">
+				
+			</div>
+			<div class="col-1  px-5 py-4 bg border treasure">
+				
+			</div>
+			<div class="col-1  px-5 py-4 bg border meme">
+				
+			</div>
+			<div class="col-1 px-5 py-4 bg border coin">
+				
+			</div>
+		</div>
+		<!--Линия B-->
+		<div class="row">
+			<div class="col-1  px-5 py-4 bg-warning text-center border">
+				<h4>B</h4>
+			</div>
+			<div class="col-1  px-5 py-4 bg border meme">
+
+			</div>
+			<div class="col-1  px-5 py-4 bg border meme">
+			
+			</div>
+			<div class="col-1  px-5 py-4 bg border coin">
+				
+			</div>
+			<div class="col-1  px-5 py-4 bg border meme">
+				
+			</div>
+			<div class="col-1 px-5 py-4 bang bg border ">
+				
+			</div>
+			<div class="col-1  px-5 py-4 bg border treasure">
+				
+			</div>
+		</div>
+		<!--Линия C-->
+		<div class="row">
+			<div class="col-1 px-5 py-4  bg-warning text-center border">
+				<h4>C</h4>
+			</div>
+			<div class="col-1  px-5 py-4 bg border bang">
+				
+			</div>
+			<div class="col-1 px-5 py-4  bg border treasure">
+				
+			</div>
+			<div class="col-1 px-5 py-4  bg border meme">
+				
+			</div>
+			<div class="col-1 px-5 py-4  bg border coin">
+				
+			</div>
+			<div class="col-1  px-5 py-4 bg border meme">
+				
+			</div>
+			<div class="col-1 px-5 py-4  bg border meme">
+				
+			</div>	
+		</div>
+		<!--Линия D-->
+		<div class="row">
+			<div class="col-1 px-5 py-4  bg-warning text-center border">
+				<h4>D</h4>
+			</div>
+			<div class="col-1  px-5 py-4 bg border coin">
+				
+			</div>
+			<div class="col-1  px-5 py-4 bg border meme ">
+				
+			</div>
+			<div class="col-1  px-5 py-4 bg border treasure">
+				
+			</div>
+			<div class="col-1  px-5 py-4 bg border meme">
+				
+			</div>
+			<div class="col-1  px-5 py-4 bg border bang">
+				
+			</div>
+			<div class="col-1  px-5 py-4 bg border meme">
+				
+			</div>
+		</div>
+		<!--Линия E-->
+		<div class="row">
+			<div class="col-1 px-5 py-4  bg-warning text-center border">
+				<h4>E</h4>
+			</div>
+			<div class="col-1 px-5 py-4  bg border treasure">
+				
+			</div>
+			<div class="col-1 px-5 py-4  bg border coin">
+				
+			</div>
+			<div class="col-1 px-5 py-4  bg border meme">
+				
+			</div>
+			<div class="col-1 px-5 py-4  bg border bang">
+				
+			</div>
+			<div class="col-1 px-5 py-4  bg border meme">
+				
+			</div>
+			<div class="col-1  px-5 py-4 bg border meme ">
+				
+			</div>
+		</div>
+		<!--Линия F-->
+		<div class="row">
+			<div class="col-1 px-5 py-4 bg-warning text-center border">
+				<h4>F</h4>
+			</div>
+			<div class="col-1 px-5 py-4 bg border meme">
+				
+			</div>
+			<div class="col-1 px-5 py-4 bg border treasure">
+				
+			</div>
+			<div class="col-1 px-5 py-4 bg border meme">
+				
+			</div>
+			<div class="col-1 px-5 py-4 bg border coin">
+				
+			</div>
+			<div class="col-1 px-5 py-4 bg border bang">
+				
+			</div>
+			<div class="col-1 px-5 py-4 bg border meme">
+				
+			</div>
+		</div>
+	</div>
+	<div class="defeat"></div>
+	<div class="win"></div>
+	<script type="text/javascript">
+		let score = document.querySelector(".score")
+		let sc = 0
+
+		let hp = document.querySelector(".hp")
+		let h = 3
+		// Есть treasure bang meme coin
+		let coin = document.querySelectorAll(".coin")
+		let bang = document.querySelectorAll(".bang")
+		let meme = document.querySelectorAll(".meme")
+		let treasure = document.querySelectorAll(".treasure")
+
+		for(let i = 0; i < 7; i++){
+			coin[i].onclick = function(){
+				alert("алмаз")
+				coin[i].style.background = "white"
+				coin[i].style.backgroundImage = "url(diamond.webp)"
+				coin[i].style.backgroundSize = "100% 100%"
+
+				sc=sc + 1
+				score.innerHTML = sc
+				if (sc==6) {
+					document.querySelector(".win").style.display = "block"
+				}
+			}
+
+		}
+		for(let i = 0; i < 6; i++){
+			bang[i].onclick = function(){
+				alert("взрыв")
+				bang[i].style.background = "red"
+				bang[i].style.backgroundImage = "url(bang.jpg)"
+				bang[i].style.backgroundSize = "100% 100%"
+
+				h=h - 1
+				hp.innerHTML = h
+				if (h==0) {
+					
+					document.querySelector(".defeat").style.display = "block"
+				}
+			}
+
+		}
+		for(let i = 0; i < 17; i++){
+			meme[i].onclick = function(){
+				alert("пусто")
+				meme[i].style.background = "white"
+				meme[i].style.backgroundImage = "url(stone.webp)"
+				meme[i].style.backgroundSize = "100% 100%"
+			}
+
+		}
+		for(let i = 0; i < 6; i++){
+			treasure[i].onclick = function(){
+				alert("Ты нашёл изумруд!")
+				treasure[i].style.background = "white"
+				treasure[i].style.backgroundImage = "url(emerald.webp)"
+				treasure[i].style.backgroundSize = "100% 100%"
+
+				sc=sc + 1
+				score.innerHTML = sc
+				if (sc==6) {
+					document.querySelector(".win").style.display = "block"
+				}
+			}
+
+		}
+	</script>
+</body>
+</html>
